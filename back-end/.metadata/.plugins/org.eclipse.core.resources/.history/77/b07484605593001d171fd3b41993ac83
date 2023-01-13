@@ -30,7 +30,7 @@ public class UserRepositoryTests {
 		User user = new User();
 		user.setU_fname("Ravi");
 		user.setU_lname("Jan");
-		user.setU_email("yath@gmail.com");
+		user.setU_email("abi@gmail.com");
 		user.setU_address("Kandy");
 		user.setU_mobile("0774567342");
 		user.setU_dob("1997-01-23");
@@ -46,7 +46,7 @@ public class UserRepositoryTests {
 	
 	@Test
 	public void testFindByEmail() {
-		String email = "arav@gmail.com";
+		String email = "abi@gmail.com";
 		User user = repo.findByEmail(email);
 		
 		assertThat(user.getU_email()).isEqualTo(email);
