@@ -3,7 +3,7 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { useNavigate } from "react-router-dom";
 import SeperatePages from "../seperatePages";
-import Layout from "../../components/layout";
+import Layout from "../../components/layoutUser";
 import reactLogo from "./reactLogo.png";
 import LoginTable from "./registerTable";
 
