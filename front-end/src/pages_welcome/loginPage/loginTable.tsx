@@ -41,7 +41,7 @@ const LoginTable=()=> {
       errors.email = "This is not a valid email format!";
     }
     if (!values.password) {
-      errors.password = "Password is required";
+      errors.password = "Password is required!";
     } else if (values.password.length < 4) {
       errors.password = "Password must be more than 4 characters";
     } else if (values.password.length > 15) {
