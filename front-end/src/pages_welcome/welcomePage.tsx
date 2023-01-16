@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "./footer";
 import welcomePage from "../../images/welcome2.png";
 import logo from "../../images/logo.png"
+import {TextField,Button,FormControl} from "@mui/material";
 
 const WelcomePage=()=>{
     var sectionStyle = {
@@ -85,10 +86,11 @@ const WelcomePage=()=>{
 
                         <a style={{color:'white'}}>by getting Vaccinated with us</a>
                         </div>
-                        <div style={{border: '2px solid white',marginTop:20,marginLeft:50,width:340}}>
+                        <Button onClick={routeChange} >
+                        <div style={{border: '1px solid white',marginTop:20,marginLeft:50,width:340}}>
                         <a style={{color:'white',fontSize:25,marginLeft:10}}>GET YOUR VACCINATION </a>
 
-                        </div>
+                        </div> </Button>
                     </div>
                 </div>
                

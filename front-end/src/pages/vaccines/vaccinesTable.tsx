@@ -8,6 +8,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import TablePagination from '@mui/material/TablePagination';
+import {TextField} from "@mui/material";
+
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -35,16 +37,13 @@ function createData(
   name: string,
   type:string,
   hospital: string,
-
 ) {
   return { _id,name,type,hospital};
 }
-
 const rows = [
   createData('001V','sinoform',"Covid-19",'Akp hospital,batti hospital'),
   createData('002V','fizer',"Covid-19",'Akp hospital,batti hospital,kalmunai hospital'),
   createData('003V','poliyo',"Covid-19",'Akp hospital,batti hospital'),
-
 ];*/}
 
 
@@ -74,6 +73,11 @@ const VaccinesTable=()=> {
 
   return (
     <Paper sx={{ width: '800px', overflow: 'hidden',marginTop:'2%',marginLeft:'10%' }}>
+             <TextField id="outlined-basic" label="Search" variant="outlined" size="small" 
+                   sx={{margin: "10px 0px 10px 30px",backgroundColor: "white","& label.Mui-focused": {color: "#F27405",}, 
+                       "& .MuiOutlinedInput-root": {"&.Mui-focused fieldset": {borderColor: "#F27405",},},}}
+                        />
+       
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>

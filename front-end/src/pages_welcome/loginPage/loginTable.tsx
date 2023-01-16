@@ -41,7 +41,7 @@ const LoginTable=()=> {
       errors.email = "This is not a valid email format!";
     }
     if (!values.password) {
-      errors.password = "Password is required!";
+      errors.password = "Password is required";
     } else if (values.password.length < 4) {
       errors.password = "Password must be more than 4 characters";
     } else if (values.password.length > 15) {
@@ -73,9 +73,11 @@ const routeRegister = () =>{
   return (
     
     <Box sx={{ bgcolor: 'background.paper', width:"70%", borderRadius:2,marginTop:10 }}>
+
             {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <>{  navigate('/appointment')        }</>
-      ) : ( <></> )}
+               <>{  navigate('/appointment')}</>
+                  ) : ( <></> )}
+                  
             <form onSubmit={handleSubmit}>
             <b style={{paddingLeft:'8%',fontSize:35}}>Login to your account</b>    
              <Divider style={{marginTop:'2%'}}/>
@@ -113,7 +115,6 @@ const routeRegister = () =>{
                        *  <Button  variant="contained" onClick={loginUserAccount} style={{alignItems:"center", marginTop:10,width:'100%',marginBottom:10}}>
                         Login
                       </Button> 
-
                        */}
                        
                       
