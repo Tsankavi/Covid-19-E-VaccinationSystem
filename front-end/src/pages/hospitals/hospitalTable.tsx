@@ -123,4 +123,4 @@ const HospitalTable=()=> {
   );
 }
 
-export default HospitalTable;
+export default HospitalTable

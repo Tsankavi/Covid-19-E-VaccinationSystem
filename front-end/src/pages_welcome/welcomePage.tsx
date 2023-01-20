@@ -3,31 +3,29 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import { useNavigate } from "react-router-dom";
-import Footer from "./footer";
 import welcomePage from "../../images/welcome2.png";
 import logo from "../../images/logo.png"
-import {TextField,Button,FormControl} from "@mui/material";
+import {Button} from "@mui/material";
+import Footer from "./footer";
+
 
 const WelcomePage=()=>{
     var sectionStyle = {
         width: "100%",
         height: "900px",
         backgroundImage: "url(" + welcomePage + ")",
-        marginTop:'-11%'
-        
+        marginTop:'-11%'        
     };
     
-    let navigate = useNavigate(); 
+let navigate = useNavigate(); 
   const routeChange = () =>{     
     let path = `/login`; 
     navigate(path);
   }
-
   const routeAbout = () =>{   
     let path = `/about`; 
     navigate(path);
-  }
-  
+  }  
   const routeContact = () =>{     
       let path = `/contact`; 
       navigate(path);
@@ -72,11 +70,11 @@ const WelcomePage=()=>{
                 <div >
                     <b style={{color:'white',fontSize:180,width:"100%",marginTop:200}}> Get Your </b>
                     <div></div>
-                    <b style={{color:'white',fontSize:80,marginLeft:'15%'}}>Get Your Vaccination
+                    <b style={{color:'white',fontSize:110,marginLeft:'15%'}}>Get Your Vaccination
                        
                     </b>
                     <div style={{marginTop:-50}}>
-                    <b style={{color:'white',fontSize:80,marginLeft:'20%'}}>Boost Your Health
+                    <b  style={{color:'white',fontSize:110,marginLeft:'20%'}}>Boost Your Health
                     
                     </b></div>
                     <div style={{fontSize:35,marginLeft:'35%'}}>
@@ -93,9 +91,8 @@ const WelcomePage=()=>{
                         </div> </Button>
                     </div>
                 </div>
-               
+               <Footer/>
             </div>
-            <Footer/>
         </div>
     )
 }

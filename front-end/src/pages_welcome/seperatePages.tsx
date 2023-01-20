@@ -1,6 +1,6 @@
 import {Paper,Table,TableBody,TableCell,TableContainer,TableHead,TablePagination,TableRow,TextField,Button,Dialog,DialogTitle,DialogContent,DialogActions,FormControl,InputLabel,Select,MenuItem,} from "@mui/material";
 import { Outlet } from "react-router-dom";
-import Layout from "../components/layoutUser";
+import Layout from "../components/layout";
 
 
 const SeperatePages=(props:any)=>{

@@ -9,7 +9,7 @@ import Setting from "./pages/setting";
 import MyAccount from "./pages/myAccount";
 import WelcomePage from "./pages_welcome/welcomePage";
 import GlobalContextProvider from "./context/GlobalContext";
-import Layout from "./components/layoutUser";
+import Layout from "./components/layout";
 import LoginPage from "./pages_welcome/loginPage";
 import AboutPage from "./pages_welcome/aboutPage";
 import ContactPage from "./pages_welcome/contactPage";

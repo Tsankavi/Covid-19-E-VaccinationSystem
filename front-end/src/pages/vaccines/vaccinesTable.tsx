@@ -37,13 +37,16 @@ function createData(
   name: string,
   type:string,
   hospital: string,
+
 ) {
   return { _id,name,type,hospital};
 }
+
 const rows = [
   createData('001V','sinoform',"Covid-19",'Akp hospital,batti hospital'),
   createData('002V','fizer',"Covid-19",'Akp hospital,batti hospital,kalmunai hospital'),
   createData('003V','poliyo',"Covid-19",'Akp hospital,batti hospital'),
+
 ];*/}
 
 

@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Formik } from "formik";
 import { useMutation, useQueryClient } from "react-query";
 import { useShopContext } from "../../../context/ShopContext";
-import { IShop, apiClient } from "../../../api/client";
+import { IShop, apiClient } from "../../../api/Demo/client";
 import { useGlobalContext } from "../../../context/GlobalContext";
 
 const REGIONS = ["region a", "region b", "region c", "region d"];
