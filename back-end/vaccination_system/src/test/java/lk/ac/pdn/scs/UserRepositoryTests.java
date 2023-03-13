@@ -9,8 +9,10 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase.Replace;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.annotation.Rollback;
 
+import lk.ac.pdn.scs.model.Gender;
 import lk.ac.pdn.scs.model.User;
 import lk.ac.pdn.scs.repository.UserRepository;
 
@@ -28,13 +30,13 @@ public class UserRepositoryTests {
 	
 	public void testCreateUser() {
 		User user = new User();
-		user.setU_fname("Ravi");
-		user.setU_lname("Jan");
-		user.setU_email("yath@gmail.com");
+		user.setU_fname("athi");
+		user.setU_lname("atunn");
+		user.setU_email("sarveee@gmail.com");
 		user.setU_address("Kandy");
 		user.setU_mobile("0774567342");
 		user.setU_dob("1997-01-23");
-		user.setU_gender("F");
+		user.setU_gender(Gender.F);
 		user.setU_password("priya20");
 		
 		User savedUser = repo.save(user);

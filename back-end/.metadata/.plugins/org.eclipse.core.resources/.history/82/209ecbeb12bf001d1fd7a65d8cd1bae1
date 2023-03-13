@@ -1,0 +1,5 @@
+package lk.ac.pdn.scs.web.dto;
+
+public class LoginDto {
+
+}

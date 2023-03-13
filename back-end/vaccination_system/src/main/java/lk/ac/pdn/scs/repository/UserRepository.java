@@ -8,7 +8,7 @@ import lk.ac.pdn.scs.model.User;
 
 
 @Repository
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("SELECT u FROM User u WHERE u.u_email = ?1")
 	public User findByEmail(String u_email);
 

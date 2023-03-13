@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -41,6 +42,24 @@ public class Hospital {
 		@Column(name="reg_code", nullable=false)
 		private String reg_code;
 		
+		
+		
+		public Hospital(String h_name, String h_email, String h_password, String h_location,
+				String reg_code) {
+			super();
+			
+			this.h_name = h_name;
+			this.h_email = h_email;
+			this.h_password = h_password;
+			this.h_location = h_location;
+			this.reg_code = reg_code;
+		}
+		
+		 @OneToOne(cascade = CascadeType.ALL)
+		 @JoinColumn(name = "fk_log_id")
+		 private Account account;
+
+
 		@OneToMany(targetEntity=Appointment.class, cascade=CascadeType.ALL)
 		@JoinColumn(name="h_id", referencedColumnName = "h_id")
 		private List<Appointment> appointments;
@@ -129,6 +148,14 @@ public class Hospital {
 
 		public void setReg_code(String reg_code) {
 			this.reg_code = reg_code;
+		}
+
+		public Account getAccount() {
+			return account;
+		}
+
+		public void setAccount(Account account) {
+			this.account = account;
 		}
 		
 		

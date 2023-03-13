@@ -5,6 +5,8 @@ package lk.ac.pdn.scs.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,14 +31,21 @@ public class Appointment {
 	@Column(name="app_time")
 	private String app_time;
 	
+	@Enumerated(EnumType.ORDINAL)
 	@Column(name="app_status")
-	private String app_status;
+    private AppointmentStatus app_status;
 	
 	
 	
 
-	
-
+	public Appointment(String app_date, String app_day, String app_time, AppointmentStatus app_status) {
+		super();
+		
+		this.app_date = app_date;
+		this.app_day = app_day;
+		this.app_time = app_time;
+		this.app_status = app_status;
+	}
 
 	public int getApp_id() {
 		return app_id;
@@ -70,11 +79,11 @@ public class Appointment {
 		this.app_time = app_time;
 	}
 
-	public String getApp_status() {
+	public AppointmentStatus getApp_status() {
 		return app_status;
 	}
 
-	public void setApp_status(String app_status) {
+	public void setApp_status(AppointmentStatus app_status) {
 		this.app_status = app_status;
 	}
 	

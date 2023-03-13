@@ -30,6 +30,15 @@ public class VaccineType {
 	@Column(name="quantity")
 	private int quantity;
 	
+	
+	
+	public VaccineType(String vt_name, int quantity) {
+		super();
+		
+		this.vt_name = vt_name;
+		this.quantity = quantity;
+	}
+
 	@OneToMany(targetEntity=VaccineDose.class, cascade=CascadeType.ALL)
 	@JoinColumn(name="vt_id", referencedColumnName = "vt_id")
 	private List<VaccineDose> vaccineDoses;

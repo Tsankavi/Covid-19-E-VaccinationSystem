@@ -2,6 +2,8 @@ package lk.ac.pdn.scs.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,14 +22,25 @@ public class VaccineDose {
 	@Column(name="v_name")
 	private String v_name;
 	
+	@Enumerated(EnumType.ORDINAL)
 	@Column(name="v_status")
-	private String v_status;
+    private VaccineStatus v_status;
 	
 	@Column(name="v_dose")
 	private int v_dose;
 	
 
 	
+	
+	
+	public VaccineDose( String v_name, VaccineStatus v_status, int v_dose) {
+		super();
+		
+		this.v_name = v_name;
+		this.v_status = v_status;
+		this.v_dose = v_dose;
+	}
+
 	public int getV_id() {
 		return v_id;
 	}
@@ -44,11 +57,11 @@ public class VaccineDose {
 		this.v_name = v_name;
 	}
 
-	public String getV_status() {
+	public VaccineStatus getV_status() {
 		return v_status;
 	}
 
-	public void setV_status(String v_status) {
+	public void setV_status(VaccineStatus v_status) {
 		this.v_status = v_status;
 	}
 
